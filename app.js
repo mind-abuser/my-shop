@@ -318,7 +318,8 @@ function initCartModal() {
 }
 
 /**
- * Подписывает кнопку "Оформить заказ" (учебная логика).
+ * Подписывает кнопку "Оформить заказ".
+ * Переводит на страницу оформления (checkout.html).
  */
 function initCheckout() {
   if (!checkoutBtn) return;
@@ -331,11 +332,8 @@ function initCheckout() {
       return;
     }
 
-    alert("Заказ оформлен (учебно)! На следующем шаге сделаем форму заказа и сохранение.");
-
-    cart = {};
-    saveCart();
-    updateCartUI();
+    // Переходим на страницу оформления заказа
+    window.location.href = "checkout.html";
   });
 }
 
