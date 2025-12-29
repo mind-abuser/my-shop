@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мой учебный магазин</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo">Мой магазин</h1>
+
+      <button class="cart-btn" id="cartBtn">
+        🛒 Корзина (<span id="cartCount">0</span>)
+      </button>
+    </header>
+
+    <main class="container">
+      <h2>Товары</h2>
+
+      <div class="controls">
+        <input
+          id="searchInput"
+          class="input"
+          type="text"
+          placeholder="Поиск по названию..."
+        />
+
+        <div class="controls-row">
+          <input
+            id="minPrice"
+            class="input"
+            type="number"
+            placeholder="Цена от"
+          />
+          <input
+            id="maxPrice"
+            class="input"
+            type="number"
+            placeholder="Цена до"
+          />
+
+          <select id="sortSelect" class="input">
+            <option value="default">Сортировка: по умолчанию</option>
+            <option value="price_asc">Цена: по возрастанию</option>
+            <option value="price_desc">Цена: по убыванию</option>
+            <option value="title_asc">Название: A→Я</option>
+            <option value="title_desc">Название: Я→A</option>
+          </select>
+
+          <button id="resetFilters">Сброс</button>
+        </div>
+
+        <p class="small">
+          Найдено: <b><span id="foundCount">0</span></b>
+        </p>
+      </div>
+
+      <div class="grid" id="productsGrid"></div>
+    </main>
+
+    <!-- Модалка корзины -->
+    <div class="modal hidden" id="cartModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Корзина</h3>
+          <button class="close" id="closeCart">✕</button>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="modal-footer">
+          <div class="total">
+            Итого: <b><span id="cartTotal">0</span> ₴</b>
+          </div>
+          <button class="primary" id="checkoutBtn">Оформить заказ</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

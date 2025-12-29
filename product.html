@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товар</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo">
+        <a href="index.html" style="text-decoration: none; color: inherit">
+          ← Мой магазин
+        </a>
+      </h1>
+
+      <button class="cart-btn" id="cartBtn">
+        🛒 Корзина (<span id="cartCount">0</span>)
+      </button>
+    </header>
+
+    <main class="container" id="productContainer">
+      <p>Загрузка товара...</p>
+    </main>
+
+    <!-- Модалка корзины — та же самая -->
+    <div class="modal hidden" id="cartModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Корзина</h3>
+          <button class="close" id="closeCart">✕</button>
+        </div>
+        <div id="cartItems"></div>
+        <div class="modal-footer">
+          <div class="total">
+            Итого: <b><span id="cartTotal">0</span> ₴</b>
+          </div>
+          <button class="primary" id="checkoutBtn">Оформить заказ</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
