@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Мои заказы</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="header">
-    <a href="index.html" style="text-decoration: none; color: inherit;">
-      <h1 class="logo">Мой магазин</h1>
-    </a>
-    <div>
-      <a href="orders.html" style="margin-right: 10px; color: #2f6bff;">📋 Заказы</a>
-      <button class="cart-btn" id="cartBtn">
-        🛒 Корзина (<span id="cartCount">0</span>)
-      </button>
-    </div>
-  </header>
-
-  <main class="container">
-    <h2>Мои заказы</h2>
-
-    <div id="ordersList"></div>
-  </main>
-
-  <!-- Модалка корзины -->
-  <div class="modal hidden" id="cartModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>Корзина</h3>
-        <button class="close" id="closeCart">✕</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мои заказы</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" style="text-decoration: none; color: inherit">
+        <h1 class="logo">Мой магазин</h1>
+      </a>
+      <div>
+        <a href="orders.html" style="margin-right: 10px; color: #2f6bff"
+          >📋 Заказы</a
+        >
+        <button class="cart-btn" id="cartBtn">
+          🛒 Корзина (<span id="cartCount">0</span>)
+        </button>
       </div>
+    </header>
 
-      <div id="cartItems"></div>
+    <main class="container">
+      <h2>Мои заказы</h2>
 
-      <div class="modal-footer">
-        <div class="total">
-          Итого: <b><span id="cartTotal">0</span> ₴</b>
+      <div id="ordersList"></div>
+    </main>
+
+    <!-- Модалка корзины -->
+    <div class="modal hidden" id="cartModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Корзина</h3>
+          <button class="close" id="closeCart">✕</button>
         </div>
-        <button class="primary" id="checkoutBtn">Оформить заказ</button>
+
+        <div id="cartItems"></div>
+
+        <div class="modal-footer">
+          <div class="total">
+            Итого: <b><span id="cartTotal">0</span> ₴</b>
+          </div>
+          <button class="primary" id="checkoutBtn">Оформить заказ</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="products.js"></script>
-  <script src="app.js"></script>
-  <script src="orders.js"></script>
-</body>
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+    <script src="orders.js"></script>
+  </body>
 </html>

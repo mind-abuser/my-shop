@@ -1,81 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Оформление заказа</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="header">
-    <a href="index.html" style="text-decoration: none; color: inherit;">
-      <h1 class="logo">Мой магазин</h1>
-    </a>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" style="text-decoration: none; color: inherit">
+        <h1 class="logo">Мой магазин</h1>
+      </a>
+    </header>
 
-  <main class="container">
-    <h2>Оформление заказа</h2>
+    <main class="container">
+      <h2>Оформление заказа</h2>
 
-    <div class="checkout-container">
-      <!-- Форма заказа -->
-      <div class="checkout-form">
-        <h3>Ваши данные</h3>
-        <form id="orderForm">
-          <div class="form-group">
-            <label for="firstName">Имя *</label>
-            <input id="firstName" type="text" class="input" required />
-          </div>
+      <div class="checkout-container">
+        <!-- Форма заказа -->
+        <div class="checkout-form">
+          <h3>Ваши данные</h3>
+          <form id="orderForm">
+            <div class="form-group">
+              <label for="firstName">Имя *</label>
+              <input id="firstName" type="text" class="input" required />
+            </div>
 
-          <div class="form-group">
-            <label for="lastName">Фамилия *</label>
-            <input id="lastName" type="text" class="input" required />
-          </div>
+            <div class="form-group">
+              <label for="lastName">Фамилия *</label>
+              <input id="lastName" type="text" class="input" required />
+            </div>
 
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input id="email" type="email" class="input" required />
-          </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input id="email" type="email" class="input" required />
+            </div>
 
-          <div class="form-group">
-            <label for="phone">Телефон *</label>
-            <input id="phone" type="tel" class="input" placeholder="+380..." required />
-          </div>
+            <div class="form-group">
+              <label for="phone">Телефон *</label>
+              <input
+                id="phone"
+                type="tel"
+                class="input"
+                placeholder="+380..."
+                required
+              />
+            </div>
 
-          <div class="form-group">
-            <label for="address">Адрес доставки *</label>
-            <textarea id="address" class="input" rows="3" required></textarea>
-          </div>
+            <div class="form-group">
+              <label for="address">Адрес доставки *</label>
+              <textarea id="address" class="input" rows="3" required></textarea>
+            </div>
 
-          <div class="form-group">
-            <label for="comments">Комментарий к заказу</label>
-            <textarea id="comments" class="input" rows="2"></textarea>
-          </div>
+            <div class="form-group">
+              <label for="comments">Комментарий к заказу</label>
+              <textarea id="comments" class="input" rows="2"></textarea>
+            </div>
 
-          <div class="form-group">
-            <label>
-              <input id="agreeTerms" type="checkbox" required />
-              Я согласен с <a href="#" style="color: #007bff;">условиями</a> *
-            </label>
-          </div>
+            <div class="form-group">
+              <label>
+                <input id="agreeTerms" type="checkbox" required />
+                Я согласен с <a href="#" style="color: #007bff">условиями</a> *
+              </label>
+            </div>
 
-          <button type="submit" class="primary btn-large">Подтвердить заказ</button>
-        </form>
-      </div>
-
-      <!-- Резюме заказа -->
-      <div class="checkout-summary">
-        <h3>Резюме заказа</h3>
-        <div id="orderItems"></div>
-        <div class="summary-total">
-          Итого: <b><span id="orderTotal">0</span> ₴</b>
+            <button type="submit" class="primary btn-large">
+              Подтвердить заказ
+            </button>
+          </form>
         </div>
-        <a href="index.html" class="btn-link">← Вернуться к покупкам</a>
-      </div>
-    </div>
-  </main>
 
-  <script src="products.js"></script>
-  <script src="app.js"></script>
-  <script src="checkout.js"></script>
-</body>
+        <!-- Резюме заказа -->
+        <div class="checkout-summary">
+          <h3>Резюме заказа</h3>
+          <div id="orderItems"></div>
+          <div class="summary-total">
+            Итого: <b><span id="orderTotal">0</span> ₴</b>
+          </div>
+          <a href="index.html" class="btn-link">← Вернуться к покупкам</a>
+        </div>
+      </div>
+    </main>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+    <script src="checkout.js"></script>
+  </body>
 </html>
