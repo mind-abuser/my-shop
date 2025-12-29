@@ -6,3 +6,4 @@ window.PRODUCTS = [
   { id: 5, title: "Коврик", price: 299, description: "Большой коврик под мышь." },
   { id: 6, title: "USB-хаб", price: 499, description: "Когда USB-портов всегда мало." },
 ];
+ 
